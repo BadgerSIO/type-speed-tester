@@ -211,3 +211,37 @@ button {
     font-size: 18px;
   }
 }
+/* blog part css  */
+#ourBlog {
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 0;
+}
+.subtitle {
+  padding: 10px 0;
+}
+.qa {
+  background: #ffffff23;
+  backdrop-filter: blur(10px);
+  padding: 40px 20px;
+  text-align: justify;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.secondarydiv {
+  width: 60%;
+  margin: 0 auto;
+}
+.qa h3 {
+  font-size: 22px;
+  text-align: center;
+}
+.qa img {
+  width: 100%;
+  padding: 20px 0;
+}
+.qa p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
