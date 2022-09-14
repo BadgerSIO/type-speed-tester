@@ -12,12 +12,16 @@ let startTime;
 let questionText = "";
 
 // Load and display question
-fetch("./texts.json")
-  .then((res) => res.json())
-  .then((data) => {
-    questionText = data[Math.floor(Math.random() * data.length)];
-    question.innerHTML = questionText;
-  });
+
+const loadQuestion = () => {
+  fetch("./texts.json")
+    .then((res) => res.json())
+    .then((data) => {
+      questionText = data[Math.floor(Math.random() * data.length)];
+      question.innerHTML = questionText;
+    });
+};
+loadQuestion();
 
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
@@ -102,6 +106,7 @@ const gameOver = () => {
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
+  loadQuestion();
 };
 
 const start = () => {
