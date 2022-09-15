@@ -77,6 +77,8 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
+  const typeSpeedfloat = (questionText.length * 60) / timeTaken;
+  const typeSpeed = typeSpeedfloat.toFixed();
 
   // show result modal
   resultModal.innerHTML = "";
@@ -91,10 +93,11 @@ const gameOver = () => {
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p>Typing Speed<span style="color:#9dffad"> ${typeSpeed}</span> KPM</p>
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, timeTaken, errorCount, typeSpeed);
 
   // restart everything
   startTime = null;

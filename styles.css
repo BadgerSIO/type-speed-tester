@@ -17,7 +17,7 @@ body {
 }
 
 #question {
-  height: 100px;
+  min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +36,7 @@ body {
 }
 
 #display {
-  height: 100px;
+  min-height: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -46,7 +46,7 @@ body {
   background-color: #171717;
   border: 2px solid #9dffad;
   border-radius: 15px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 #countdown {
@@ -173,6 +173,12 @@ button {
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
 }
+#result p {
+  padding-bottom: 7px;
+}
+#result button {
+  margin-top: 10px;
+}
 
 #modal-background {
   background: rgb(255, 255, 255);
@@ -186,30 +192,6 @@ button {
   width: 100%;
   position: fixed;
   top: 0;
-}
-@media only screen and (max-width: 992px) {
-  #histories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .box-container {
-    padding: 0 20px;
-    width: 100%;
-  }
-  .card {
-    flex-direction: column;
-  }
-  #display {
-    font-size: 18px;
-    line-height: 10px;
-    padding: 0 1rem;
-  }
-  #question {
-    font-size: 18px;
-  }
 }
 /* blog part css  */
 #ourBlog {
@@ -244,4 +226,45 @@ button {
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+  #histories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .secondarydiv {
+    width: 90%;
+  }
+  .box-container {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .box-container {
+    padding: 0 20px;
+    width: 100%;
+  }
+  .card {
+    flex-direction: column;
+  }
+  #display {
+    font-size: 18px;
+    line-height: 10px;
+    padding: 0 1rem;
+  }
+  #question {
+    font-size: 18px;
+  }
+  .secondarydiv {
+    width: 95%;
+  }
+  .qa h3 {
+    font-size: 18px;
+  }
+  .qa p {
+    font-size: 16px;
+    line-height: 30px;
+  }
 }
